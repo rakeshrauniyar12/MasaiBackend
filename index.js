@@ -44,7 +44,9 @@ const server = app.listen(
     `Server running in ${process.env.PORT} mode on port ${PORT}`.yellow.bold
   )
 );
-
+app.get("/",()=>{
+  return "Hello"
+})
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err, promise) => {
   console.log(`Error: ${err.message}`.red);
