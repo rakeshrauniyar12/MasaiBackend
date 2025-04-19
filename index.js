@@ -44,9 +44,9 @@ const server = app.listen(
     `Server running in ${process.env.PORT} mode on port ${PORT}`.yellow.bold
   )
 );
-app.get("/",()=>{
-  return "Hello"
-})
+app.get("/", (req, res) => {
+  res.send("Welcome to the authentication API");
+});
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err, promise) => {
   console.log(`Error: ${err.message}`.red);
